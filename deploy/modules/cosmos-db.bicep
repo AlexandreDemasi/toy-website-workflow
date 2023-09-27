@@ -9,7 +9,7 @@ param location string
 param environmentType string
 
 @description('The name of the Cosmos DB account. This name must be globally unique.')
-param cosmosDBAccountName string
+param cosmosDBAccountName string = 'coucoula'
 
 var cosmosDBDatabaseName = 'ProductCatalog'
 var cosmosDBDatabaseThroughput = (environmentType == 'prod') ? 1000 : 400
